@@ -1,29 +1,25 @@
 # Meme Kanseri Tahmin Uygulaması
 
-Bu proje, Wisconsin Meme Kanseri (Diagnostic) veri seti kullanılarak geliştirilmiş bir makine öğrenmesi tabanlı web uygulamasıdır. Uygulama, tümör özelliklerine dayanarak iyi huylu (benign) veya kötü huylu (malignant) tümör tahmini yapmaktadır.
+Bu proje, Wisconsin Meme Kanseri (Diagnostic) veri setini kullanarak meme kanseri teşhisi için makine öğrenmesi modelleri geliştiren ve bu modelleri kullanarak tahmin yapan bir web uygulamasıdır.
 
-## 🚀 Özellikler
+## Veri Seti
 
-- 5 farklı makine öğrenmesi modeli (Logistic Regression, Random Forest, SVM, KNN, Neural Network)
-- Kullanıcı dostu web arayüzü
-- Gerçek zamanlı tahmin
-- Model performans karşılaştırmaları
-- Görsel geri bildirimler
+Uygulama, [Kaggle Wisconsin Meme Kanseri (Diagnostic) Veri Seti](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)'ni kullanmaktadır.
 
-## 📊 Veri Seti
+## Canlı Uygulama
 
-Wisconsin Meme Kanseri (Diagnostic) veri seti kullanılmaktadır:
-- Veri seti: [Kaggle - Breast Cancer Wisconsin (Diagnostic) Data Set](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
-- 569 örnek
-- 32 özellik
-- Her özellik için 3 farklı ölçüm:
-  - Mean (Ortalama) değerler
-  - SE (Standard Error) değerler
-  - Worst (En Kötü) değerler
+Uygulamayı [Streamlit Cloud](https://breastcancerapp-rx3e5grzzrwkuzpx24wr9m.streamlit.app/) üzerinden test edebilirsiniz.
 
-## 🛠️ Teknolojiler
+## Özellikler
 
-- Python 3.x
+- Veri seti hakkında detaylı bilgi
+- Farklı makine öğrenmesi modellerinin performans karşılaştırması
+- Kullanıcı dostu arayüz ile tahmin yapma imkanı
+- Görsel grafikler ve sonuç analizleri
+
+## Kullanılan Teknolojiler
+
+- Python
 - Streamlit
 - Scikit-learn
 - TensorFlow
@@ -32,12 +28,11 @@ Wisconsin Meme Kanseri (Diagnostic) veri seti kullanılmaktadır:
 - Matplotlib
 - Seaborn
 
-## ⚙️ Kurulum
+## Kurulum
 
 1. Projeyi klonlayın:
 ```bash
-git clone [proje-url]
-cd breast_cancer_app
+git clone https://github.com/iremalgul/breast_cancer_app.git
 ```
 
 2. Gerekli kütüphaneleri yükleyin:
@@ -45,22 +40,14 @@ cd breast_cancer_app
 pip install -r requirements.txt
 ```
 
-3. Uygulamayı başlatın:
+3. Uygulamayı çalıştırın:
 ```bash
 streamlit run app.py
 ```
 
-## 📝 Kullanım
+## Model Performansları
 
-1. Uygulama başlatıldığında, tarayıcınızda otomatik olarak açılacaktır
-2. Veri seti hakkında bilgileri ve model performanslarını inceleyebilirsiniz
-3. Tahmin yapmak için:
-   - Tümör özelliklerini girin
-   - İstediğiniz modeli seçin
-   - "Tahmin Yap" butonuna tıklayın
-4. Sonuç ve güven oranı ekranda gösterilecektir
-
-## 📈 Model Performansları
+Uygulama içerisinde kullanılan modellerin performans metrikleri:
 
 - Logistic Regression: %95
 - Random Forest: %97
@@ -68,26 +55,14 @@ streamlit run app.py
 - KNN: %95
 - Neural Network: %96
 
-## 📁 Proje Yapısı
+## Katkıda Bulunma
 
-```
-breast_cancer_app/
-│
-├── app.py              # Streamlit uygulaması
-├── requirements.txt    # Gerekli kütüphaneler
-├── README.md          # Proje dokümantasyonu
-│
-└── models/            # Eğitilmiş modeller
-    ├── logreg.pkl
-    ├── rf_model.pkl
-    ├── svm_model.pkl
-    ├── knn_model.pkl
-    ├── nn_model.h5
-    └── scaler.pkl
-```
+1. Bu depoyu fork edin
+2. Yeni bir branch oluşturun (`git checkout -b feature/yeniOzellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik: Açıklama'`)
+4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
+5. Bir Pull Request oluşturun
 
-## ⚠️ Önemli Notlar
+## Lisans
 
-- Bu uygulama sadece eğitim amaçlıdır
-- Gerçek tıbbi teşhis için kullanılmamalıdır
-- Tüm tahminler bir doktor tarafından doğrulanmalıdır
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
